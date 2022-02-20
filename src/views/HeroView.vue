@@ -66,6 +66,6 @@
 
 
     export default {
-        components: { NavBarComponent, ProductCard },
+        components: { NavBarComponent, ProductCard }
     };
   </script>
