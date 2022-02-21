@@ -68,7 +68,7 @@
     
                             <div class="row">
                                 <div class="col">
-                                    <router-link to="thank-your"><button class="btn btn-outline-dark send-btn">Send us</button></router-link>
+                                    <router-link to="thank-you"><button class="btn btn-outline-dark send-btn">Send us</button></router-link>
                                 </div>
                             </div>
                         </form>

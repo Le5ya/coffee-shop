@@ -35,12 +35,12 @@
           <div class="row">
             <div class="col-lg-10 offset-lg-1">
               <div class="shop__wrapper">
-                  <shop-card />
-                  <shop-card />
-                  <shop-card />
-                  <shop-card />
-                  <shop-card />
-                  <shop-card />
+                  <product-card />
+                    <product-card />
+                    <product-card />
+                    <product-card />
+                    <product-card />
+                    <product-card />
               </div>
             </div>
           </div>
@@ -51,10 +51,11 @@
 
 <script>
   import NavBarComponent from "@/components/NavBarComponent.vue";
-  import ShopCard from "@/components/ShopCard.vue";
+  import ProductCard from "@/components/ProductCard.vue";
+  // import ShopCard from "@/components/ShopCard.vue";
 
 
   export default {
-    components: { NavBarComponent, ShopCard }
+    components: { NavBarComponent, ProductCard }
   }
 </script>
