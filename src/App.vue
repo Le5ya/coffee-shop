@@ -2,43 +2,31 @@
 <div>
   <h1>{{title}}</h1>
    <ul>
-    <li>
-      <img :src="require(`@/assets/images/${posts[0].icon}`)" v-bind:alt="posts[0].icon">
-      <span>{{posts[0].text}}</span>
-    </li>
-    <li>
-      <img :src="require(`@/assets/images/${posts[1].icon}`)" v-bind:alt="posts[1].icon">
-      <span>{{posts[1].text}}</span>
-    </li>
-    <li>
-      <img :src="require(`@/assets/images/${posts[2].icon}`)" v-bind:alt="posts[2].icon">
-      <span>{{posts[2].text}}</span>
-    </li>
-    <li class="list-item" :class="posts[3].checked ? 'checked' : ''">
-      <img :src="require(`@/assets/images/${posts[3].icon}`)" v-bind:alt="posts[3].icon">
-      <span>{{posts[3].text}}</span>
-    </li>
+     <list-item 
+        :text="posts[0].text" 
+        :icon="posts[0].icon" 
+        />
+     <list-item 
+        :text="posts[1].text" 
+        :icon="posts[1].icon" 
+        />
+     <list-item 
+        :text="posts[2].text" 
+        :icon="posts[2].icon" 
+        />
+   
   </ul>
   <span class="total">Всего строк: {{totalCount}}</span>
 </div>
-  <!-- <div class="wrapper">
-  <router-view/>
-
-  <footer-component/>
-
-  </div> -->
+ 
   
 </template>
 
 <script>
-// import HeroView from '@/views/HeroView.vue'
-// import ForYourPleasureView from '@/views/ForYourPleasureView.vue'
-// import ContactUsView from '@/views/ContactUsView.vue'
-// import FooterComponent from '@/components/FooterComponent.vue'
-
+import ListItem from '@/components/ListItem.vue'
 
 export default {
-  // components: { HeroView, ForYourPleasureView, ContactUsView, FooterComponent }
+  components: { ListItem },
   data() {
     return {
       title: 'Data, Computed',
@@ -58,11 +46,8 @@ export default {
           icon: 'phone.png',
           text: 'текст третий',
         },
-        {
-          id: 3,
-          icon: 'phone.png',
-          text: 'текст сто третий',
-        },
+        
+
       ],
     };
   },
