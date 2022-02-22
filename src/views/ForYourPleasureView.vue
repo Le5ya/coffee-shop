@@ -35,48 +35,84 @@
           <div class="row">
             <div class="col-lg-10 offset-lg-1">
               <div class="shop__wrapper">
-                   <div class="best__item">
-                                <img v-bind:src="require(`@/assets/img/${cards[0].img}`)" v-bind:alt="cards[0].img">
+                <product-card
+                    classItem="shop__item" 
+                    :name="goods[0].name"
+                    :price="goods[0].price"
+                    :image="goods[0].image"
+                />
+                <product-card
+                    classItem="shop__item" 
+                    :name="goods[1].name"
+                    :price="goods[1].price"
+                    :image="goods[1].image"
+                />
+                <product-card
+                    classItem="shop__item" 
+                    :name="goods[2].name"
+                    :price="goods[2].price"
+                    :image="goods[2].image"
+                />
+                <product-card
+                    classItem="shop__item" 
+                    :name="goods[3].name"
+                    :price="goods[3].price"
+                    :image="goods[3].image"
+                />
+                <product-card
+                    classItem="shop__item" 
+                    :name="goods[4].name"
+                    :price="goods[4].price"
+                    :image="goods[4].image"
+                />
+                <product-card
+                    classItem="shop__item" 
+                    :name="goods[5].name"
+                    :price="goods[5].price"
+                    :image="goods[5].image"
+                />
+                   <!-- <div class="best__item">
+                                <img v-bind:src="require(`@/assets/img/${goods[0].img}`)" v-bind:alt="goods[0].img">
                                 <div class="best__item-title">
-                                    {{ cards[0].title}}
+                                    {{ goods[0].title}}
                                 </div>
-                                <div class="best__item-price">{{ cards[0].price}}</div>
-                            </div>
-                            <div class="best__item">
-                                <img v-bind:src="require(`@/assets/img/${cards[1].img}`)" v-bind:alt="cards[1].img">
+                                <div class="best__item-price">{{ goods[0].price}}</div>
+                            </div> -->
+                            <!-- <div class="best__item">
+                                <img v-bind:src="require(`@/assets/img/${goods[1].img}`)" v-bind:alt="goods[1].img">
                                 <div class="best__item-title">
-                                    {{ cards[1].title}}
+                                    {{ goods[1].title}}
                                 </div>
-                                <div class="best__item-price">{{ cards[1].price}}</div>
-                            </div>
-                            <div class="best__item">
-                                <img v-bind:src="require(`@/assets/img/${cards[2].img}`)" v-bind:alt="cards[2].img">
+                                <div class="best__item-price">{{ goods[1].price}}</div>
+                            </div> -->
+                            <!-- <div class="best__item">
+                                <img v-bind:src="require(`@/assets/img/${goods[2].img}`)" v-bind:alt="goods[2].img">
                                 <div class="best__item-title">
-                                    {{ cards[2].title}}
+                                    {{ goods[2].title}}
                                 </div>
-                                <div class="best__item-price">{{ cards[2].price}}</div>
-                            </div>
-                            <div class="best__item">
-                                <img v-bind:src="require(`@/assets/img/${cards[3].img}`)" v-bind:alt="cards[3].img">
+                                <div class="best__item-price">{{ goods[2].price}}</div>
+                            </div> -->
+                            <!-- <div class="best__item">
+                                <img v-bind:src="require(`@/assets/img/${goods[3].img}`)" v-bind:alt="goods[3].img">
                                 <div class="best__item-title">
-                                    {{ cards[3].title}}
+                                    {{ goods[3].title}}
                                 </div>
-                                <div class="best__item-price">{{ cards[3].price}}</div>
-                            </div>
-                            <div class="best__item">
-                                <img v-bind:src="require(`@/assets/img/${cards[4].img}`)" v-bind:alt="cards[4].img">
+                                <div class="best__item-price">{{ goods[3].price}}</div>
+                            </div> -->
+                            <!-- <div class="best__item">
+                                <img v-bind:src="require(`@/assets/img/${goods[4].img}`)" v-bind:alt="goods[4].img">
                                 <div class="best__item-title">
-                                    {{ cards[4].title}}
+                                    {{ goods[4].title}}
                                 </div>
-                                <div class="best__item-price">{{ cards[4].price}}</div>
-                            </div>
-                            <div class="best__item">
-                                <img v-bind:src="require(`@/assets/img/${cards[5].img}`)" v-bind:alt="cards[5].img">
+                                <div class="best__item-price">{{ goods[4].price}}</div>
+                            </div> -->
+                            <!-- <div class="best__item">
+                                <img v-bind:src="require(`@/assets/img/${goods[5].img}`)" v-bind:alt="goods[5].img">
                                 <div class="best__item-title">
-                                    {{ cards[5].title}}
+                                    {{ goods[5].title}}
                                 </div>
-                                <div class="best__item-price">{{ cards[5].price}}</div>
-                            </div>
+                                <div class="best__item-price">{{ goods[5].price}}</div>
+                            </div> -->
               </div>
             </div>
           </div>
@@ -87,47 +123,48 @@
 
 <script>
   import NavBarComponent from "@/components/NavBarComponent.vue";
+  import ProductCard from '@/components/ProductCard.vue';
 
   export default {
-    components: { NavBarComponent },
+    components: { NavBarComponent, ProductCard },
     data() {
       return {
-          cards: [
+          goods: [
               {
                   id: 0,
-                  img: 'coffee-1.jpg',
-                  title: 'Solimo Coffee Beans 2kg',
-                  price: '10.73$'
+                  image: 'coffee-1.jpg',
+                  name: 'Solimo Coffee Beans 2kg',
+                  price: 10.73
               },
               {
                   id: 1,
-                  img: 'coffee-2.jpg',
-                  title: 'Presto Coffee Beans 1kg',
-                  price: '15.99$'
+                  image: 'coffee-2.jpg',
+                  name: 'Presto Coffee Beans 1kg',
+                  price: 15.99
               },
               {
                   id: 2,
-                  img: 'coffee-3.jpg',
-                  title: 'AROMISTICO Coffee 1kg',
-                  price: '6.99$'
+                  image: 'coffee-3.jpg',
+                  name: 'AROMISTICO Coffee 1kg',
+                  price: 6.99
               },
               {
                   id: 3,
-                  img: 'coffee-1.jpg',
-                  title: 'Solimo Coffee Beans 2kg',
-                  price: '10.73$'
+                  image: 'coffee-1.jpg',
+                  name: 'Solimo Coffee Beans 2kg',
+                  price: 10.73
               },
               {
                   id: 4,
-                  img: 'coffee-2.jpg',
-                  title: 'Presto Coffee Beans 1kg',
-                  price: '15.99$'
+                  image: 'coffee-2.jpg',
+                  name: 'Presto Coffee Beans 1kg',
+                  price: 15.99
               },
               {
                   id: 5,
-                  img: 'coffee-3.jpg',
-                  title: 'AROMISTICO Coffee 1kg',
-                  price: '6.99$'
+                  image: 'coffee-3.jpg',
+                  name: 'AROMISTICO Coffee 1kg',
+                  price: 6.99
               },
               
           ],

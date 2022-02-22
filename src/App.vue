@@ -16,7 +16,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
 
 
 export default {
-  components: { HeroView, ForYourPleasureView, ContactUsView, FooterComponent }
+  components: { HeroView, ForYourPleasureView, ContactUsView,  FooterComponent }
  
 }
 </script>
