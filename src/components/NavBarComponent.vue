@@ -8,14 +8,6 @@
         flex-wrap
       "
     >
-      <!-- <li class="header__item">
-        <router-link :to="links.header.link">
-          <img
-            :src="require(`@/assets/logo/${links.header.icon}`)"
-            :alt="links.header.icon"
-          />
-        </router-link>
-      </li> -->
       <nav-item :link="links.header.link" classLink="header__item">
         <img
           :src="require(`@/assets/logo/${links.header.icon}`)"

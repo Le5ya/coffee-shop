@@ -1,174 +1,117 @@
 <template>
   <main>
     <div class="banner goodspage-banner">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <nav-bar-component />
-                </div>
-            </div>
-            <h1 class="title-big">For your pleasure</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <nav-bar-component />
+          </div>
         </div>
+        <h1 class="title-big">For your pleasure</h1>
+      </div>
     </div>
     <section class="shop">
       <div class="container">
         <div class="row">
-            <div class="col-lg-4 offset-2">
-                <img class="shop__girl" src="@/assets/img/coffee_goods.jpg" alt="girl">
+          <div class="col-lg-4 offset-2">
+            <img
+              class="shop__girl"
+              src="@/assets/img/coffee_goods.jpg"
+              alt="girl"
+            />
+          </div>
+          <div class="col-lg-4">
+            <div class="title">About our beans</div>
+            <img
+              class="beanslogo"
+              src="@/assets/logo/Beans_logo_dark.svg"
+              alt="Beans logo"
+            />
+            <div class="shop__text">
+              Extremity sweetness difficult behaviour he of. On disposal of as
+              landlord horrible.
+              <br /><br />
+              Afraid at highly months do things on at. Situation recommend
+              objection do intention<br />
+              so questions. <br />
+              As greatly removed calling pleased improve an. Last ask him cold
+              feel<br />
+              met spot shy want. Children me laughing we prospect answered
+              followed. At it went<br />
+              is song that held help face.
             </div>
-            <div class="col-lg-4">
-                <div class="title">About our beans</div>
-                <img class="beanslogo" src="@/assets/logo/Beans_logo_dark.svg" alt="Beans logo">
-                <div class="shop__text">
-                    Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
-                    <br><br>
-                    Afraid at highly months do things on at. Situation recommend objection do intention<br>
-                    so questions. <br>
-                    As greatly removed calling pleased improve an. Last ask him cold feel<br>
-                    met spot shy want. Children me laughing we prospect answered followed. At it went<br>
-                    is song that held help face.
-                </div>
-            </div>
+          </div>
         </div>
 
         <div class="line"></div>
-          <div class="row">
-            <div class="col-lg-10 offset-lg-1">
-              <div class="shop__wrapper">
-                <product-card
-                    classItem="shop__item" 
-                    :name="goods[0].name"
-                    :price="goods[0].price"
-                    :image="goods[0].image"
-                />
-                <product-card
-                    classItem="shop__item" 
-                    :name="goods[1].name"
-                    :price="goods[1].price"
-                    :image="goods[1].image"
-                />
-                <product-card
-                    classItem="shop__item" 
-                    :name="goods[2].name"
-                    :price="goods[2].price"
-                    :image="goods[2].image"
-                />
-                <product-card
-                    classItem="shop__item" 
-                    :name="goods[3].name"
-                    :price="goods[3].price"
-                    :image="goods[3].image"
-                />
-                <product-card
-                    classItem="shop__item" 
-                    :name="goods[4].name"
-                    :price="goods[4].price"
-                    :image="goods[4].image"
-                />
-                <product-card
-                    classItem="shop__item" 
-                    :name="goods[5].name"
-                    :price="goods[5].price"
-                    :image="goods[5].image"
-                />
-                   <!-- <div class="best__item">
-                                <img v-bind:src="require(`@/assets/img/${goods[0].img}`)" v-bind:alt="goods[0].img">
-                                <div class="best__item-title">
-                                    {{ goods[0].title}}
-                                </div>
-                                <div class="best__item-price">{{ goods[0].price}}</div>
-                            </div> -->
-                            <!-- <div class="best__item">
-                                <img v-bind:src="require(`@/assets/img/${goods[1].img}`)" v-bind:alt="goods[1].img">
-                                <div class="best__item-title">
-                                    {{ goods[1].title}}
-                                </div>
-                                <div class="best__item-price">{{ goods[1].price}}</div>
-                            </div> -->
-                            <!-- <div class="best__item">
-                                <img v-bind:src="require(`@/assets/img/${goods[2].img}`)" v-bind:alt="goods[2].img">
-                                <div class="best__item-title">
-                                    {{ goods[2].title}}
-                                </div>
-                                <div class="best__item-price">{{ goods[2].price}}</div>
-                            </div> -->
-                            <!-- <div class="best__item">
-                                <img v-bind:src="require(`@/assets/img/${goods[3].img}`)" v-bind:alt="goods[3].img">
-                                <div class="best__item-title">
-                                    {{ goods[3].title}}
-                                </div>
-                                <div class="best__item-price">{{ goods[3].price}}</div>
-                            </div> -->
-                            <!-- <div class="best__item">
-                                <img v-bind:src="require(`@/assets/img/${goods[4].img}`)" v-bind:alt="goods[4].img">
-                                <div class="best__item-title">
-                                    {{ goods[4].title}}
-                                </div>
-                                <div class="best__item-price">{{ goods[4].price}}</div>
-                            </div> -->
-                            <!-- <div class="best__item">
-                                <img v-bind:src="require(`@/assets/img/${goods[5].img}`)" v-bind:alt="goods[5].img">
-                                <div class="best__item-title">
-                                    {{ goods[5].title}}
-                                </div>
-                                <div class="best__item-price">{{ goods[5].price}}</div>
-                            </div> -->
-              </div>
+
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+            <div class="shop__wrapper">
+              <product-card
+                v-for="good in goods"
+                :key="good.id"
+                :name="good.name"
+                :price="good.price"
+                :image="good.image"
+                classItem="shop__item"
+              >
+              </product-card>
             </div>
           </div>
+        </div>
       </div>
     </section>
   </main>
 </template>
 
 <script>
-  import NavBarComponent from "@/components/NavBarComponent.vue";
-  import ProductCard from '@/components/ProductCard.vue';
+import NavBarComponent from "@/components/NavBarComponent.vue";
+import ProductCard from "@/components/ProductCard.vue";
 
-  export default {
-    components: { NavBarComponent, ProductCard },
-    data() {
-      return {
-          goods: [
-              {
-                  id: 0,
-                  image: 'coffee-1.jpg',
-                  name: 'Solimo Coffee Beans 2kg',
-                  price: 10.73
-              },
-              {
-                  id: 1,
-                  image: 'coffee-2.jpg',
-                  name: 'Presto Coffee Beans 1kg',
-                  price: 15.99
-              },
-              {
-                  id: 2,
-                  image: 'coffee-3.jpg',
-                  name: 'AROMISTICO Coffee 1kg',
-                  price: 6.99
-              },
-              {
-                  id: 3,
-                  image: 'coffee-1.jpg',
-                  name: 'Solimo Coffee Beans 2kg',
-                  price: 10.73
-              },
-              {
-                  id: 4,
-                  image: 'coffee-2.jpg',
-                  name: 'Presto Coffee Beans 1kg',
-                  price: 15.99
-              },
-              {
-                  id: 5,
-                  image: 'coffee-3.jpg',
-                  name: 'AROMISTICO Coffee 1kg',
-                  price: 6.99
-              },
-              
-          ],
-      }
-        }
-  }
+export default {
+  components: { NavBarComponent, ProductCard },
+  data() {
+    return {
+      goods: [
+        {
+          id: 0,
+          image: "coffee-1.jpg",
+          name: "Solimo Coffee Beans 2kg",
+          price: 10.73,
+        },
+        {
+          id: 1,
+          image: "coffee-2.jpg",
+          name: "Presto Coffee Beans 1kg",
+          price: 15.99,
+        },
+        {
+          id: 2,
+          image: "coffee-3.jpg",
+          name: "AROMISTICO Coffee 1kg",
+          price: 6.99,
+        },
+        {
+          id: 3,
+          image: "coffee-1.jpg",
+          name: "Solimo Coffee Beans 2kg",
+          price: 10.73,
+        },
+        {
+          id: 4,
+          image: "coffee-2.jpg",
+          name: "Presto Coffee Beans 1kg",
+          price: 15.99,
+        },
+        {
+          id: 5,
+          image: "coffee-3.jpg",
+          name: "AROMISTICO Coffee 1kg",
+          price: 6.99,
+        },
+      ],
+    };
+  },
+};
 </script>
