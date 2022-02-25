@@ -79,6 +79,7 @@
                 </div>
                 <div class="col col-12">
                   <textarea
+                    v-model="form.message"
                     class="form-control"
                     name="message"
                     id="message"
@@ -94,8 +95,7 @@
                   <button type="submit" class="btn btn-outline-dark send-btn">
                     Send us
                   </button>
-                  <!-- </router-link -->
-                  >
+                  <!-- </router-link> -->
                 </div>
               </div>
             </form>
@@ -109,20 +109,21 @@
  <script>
 import NavBarComponent from "@/components/NavBarComponent.vue";
 export default {
-  components: { NavBarComponent },
   data() {
     return {
       form: {
         name: "",
         email: "",
         phone: "",
+        message: "",
       },
     };
   },
   methods: {
-    submit(event) {
-      console.log(event);
+    submit() {
+      console.log(this.form);
     },
   },
+  components: { NavBarComponent },
 };
 </script>
