@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 
 import links from './links'
 import cards from './cards'
-
+// lasdkfjlsdafj
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
@@ -11,5 +11,5 @@ const store = new Vuex.Store({
     links,
     cards
   }
-})  
+})
 export default store
