@@ -11,5 +11,5 @@ const store = new Vuex.Store({
     links,
     cards
   }
-})  
+})
 export default store
