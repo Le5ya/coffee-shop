@@ -1,0 +1,32 @@
+<template>
+  <section>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Role</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alex</td>
+            <td>24</td>
+            <td>Developer</td>
+          </tr>
+          <tr>
+            <td>Max</td>
+            <td>22</td>
+            <td>Developer</td>
+          </tr>
+          <tr>
+            <td>Ruslan</td>
+            <td>24</td>
+            <td>Developer</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</template>
