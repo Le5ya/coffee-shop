@@ -92,6 +92,9 @@ export default {
   components: { NavBarComponent, ProductCard },
   computed: {
     bestsellers() {
+      // console.log("BEST SELLERS");
+      // console.log(this.$store.getters["getBestsellers"]);
+      // console.log(this.$store.getters["getBestsellers"]["0"]);
       return this.$store.getters["getBestsellers"];
     },
   },

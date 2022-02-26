@@ -73,6 +73,9 @@ export default {
   components: { NavBarComponent, ProductCard },
   computed: {
     coffee() {
+      // console.log("COFFEE");
+      // console.log(this.$store.getters["getCoffee"]);
+      // console.log(this.$store.getters["getCoffee"][0]);
       return this.$store.getters["getCoffee"];
     },
   },
