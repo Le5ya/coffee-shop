@@ -90,6 +90,11 @@ import { scrollIntoView } from "seamless-scroll-polyfill";
 
 export default {
   components: { NavBarComponent, ProductCard },
+  computed: {
+    bestsellers() {
+      return this.$store.getters["getBestsellers"];
+    },
+  },
 
   // data() {
   //   return {
