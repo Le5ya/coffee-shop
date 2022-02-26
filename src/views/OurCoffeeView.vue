@@ -49,7 +49,7 @@
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
               <product-card
-                v-for="card in coffee"
+                v-for="card in coffee.coffee"
                 :key="card.id"
                 :name="card.name"
                 :price="card.price"
@@ -73,9 +73,6 @@ export default {
   components: { NavBarComponent, ProductCard },
   computed: {
     coffee() {
-      // console.log("COFFEE");
-      // console.log(this.$store.getters["getCoffee"]);
-      // console.log(this.$store.getters["getCoffee"][0]);
       return this.$store.getters["getCoffee"];
     },
   },

@@ -36,9 +36,6 @@ export default {
   components: { NavItem },
   computed: {
     links() {
-      // console.log("LINKS");
-      // console.log(this.$store.getters["getFooterLinks"]);
-      // console.log(this.$store.getters["getFooterLinks"][0]);
       return this.$store.getters["getFooterLinks"];
     },
   },

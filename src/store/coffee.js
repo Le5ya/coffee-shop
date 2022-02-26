@@ -1,4 +1,5 @@
 const coffee = {
+
   state: {
     coffee: [{
         id: 0,
@@ -47,6 +48,6 @@ const coffee = {
     },
 
   }
-};
+}
 
 export default coffee

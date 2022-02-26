@@ -1,4 +1,5 @@
 const bestsellers = {
+
   state: {
     bestsellers: [{
         id: 0,
@@ -23,11 +24,11 @@ const bestsellers = {
   getters: {
     getBestsellers(state) {
       return {
-        bestsellers: state.bestsellers
+        bestsellers: state.bestsellers,
 
       }
     },
 
   },
-};
+}
 export default bestsellers
