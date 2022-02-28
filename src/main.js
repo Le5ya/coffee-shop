@@ -7,16 +7,16 @@ import store from "./store"
 
 
 import './assets/scss/style.scss'
+import './filters'
 
 Vue.config.productionTip = false
 
 new Vue({
-   store,
-   router,
+  store,
+  router,
   render: h => h(App)
 }).$mount('#app')
 
-const counter = (a=1, b) => {
+const counter = (a = 1, b) => {
   return a + b
 }
-

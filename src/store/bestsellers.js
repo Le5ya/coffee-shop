@@ -23,10 +23,7 @@ const bestsellers = {
   },
   getters: {
     getBestsellers(state) {
-      return {
-        bestsellers: state.bestsellers,
-
-      }
+      return state.bestsellers
     },
 
   },

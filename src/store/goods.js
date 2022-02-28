@@ -41,9 +41,8 @@ const goods = {
   },
   getters: {
     getGoods(state) {
-      return {
-        goods: state.goods,
-      }
+      return state.goods
+
     },
 
   },

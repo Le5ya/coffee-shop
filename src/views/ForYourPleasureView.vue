@@ -49,12 +49,14 @@
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
               <product-card
-                v-for="card in goods.goods"
+                v-for="card in goods"
                 :key="card.id"
                 :name="card.name"
                 :price="card.price"
                 :image="card.image"
                 classItem="shop__item"
+                :card="card"
+                @onNavigate="navigate"
               >
               </product-card>
             </div>
@@ -68,6 +70,7 @@
 <script>
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
+import { navigate } from "../mixins/navigate";
 
 export default {
   components: { NavBarComponent, ProductCard },
@@ -76,47 +79,11 @@ export default {
       return this.$store.getters["getGoods"];
     },
   },
-  // data() {
-  //   return {
-  //     goods: [
-  //       {
-  //         id: 0,
-  //         image: "goods-1.jpg",
-  //         name: "Solimo Coffee Beans 2kg",
-  //         price: 10.73,
-  //       },
-  //       {
-  //         id: 1,
-  //         image: "goods-2.jpg",
-  //         name: "Presto Coffee Beans 1kg",
-  //         price: 15.99,
-  //       },
-  //       {
-  //         id: 2,
-  //         image: "goods-3.jpg",
-  //         name: "AROMISTICO Coffee 1kg",
-  //         price: 6.99,
-  //       },
-  //       {
-  //         id: 3,
-  //         image: "goods-1.jpg",
-  //         name: "Solimo Coffee Beans 2kg",
-  //         price: 10.73,
-  //       },
-  //       {
-  //         id: 4,
-  //         image: "goods-2.jpg",
-  //         name: "Presto Coffee Beans 1kg",
-  //         price: 15.99,
-  //       },
-  //       {
-  //         id: 5,
-  //         image: "goods-3.jpg",
-  //         name: "AROMISTICO Coffee 1kg",
-  //         price: 6.99,
-  //       },
-  //     ],
-  //   };
-  // },
+  data() {
+    return {
+      name: "goods",
+    };
+  },
+  mixins: [navigate],
 };
 </script>
