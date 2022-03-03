@@ -71,10 +71,8 @@
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
 import { navigate } from "../mixins/navigate";
-
 export default {
   components: { NavBarComponent, ProductCard },
-
   computed: {
     coffee() {
       return this.$store.getters["getCoffee"];
@@ -86,5 +84,12 @@ export default {
     };
   },
   mixins: [navigate],
+  mounted() {
+    fetch("http://localhost:3000/coffee")
+      .then((res) => res.json())
+      .then((data) => {
+        this.$store.dispatch("setCoffeeData", data);
+      });
+  },
 };
 </script>

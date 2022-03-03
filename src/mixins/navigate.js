@@ -10,6 +10,6 @@ export const navigate = {
     },
   },
   mounted() {
-    console.log('fron mixin')
+    console.log('from mixin')
   }
 }
