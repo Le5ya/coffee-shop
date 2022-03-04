@@ -97,14 +97,7 @@ export default {
       name: "bestsellers",
     };
   },
-  mixins: [navigate],
-  mounted() {
-    fetch("http://localhost:3000/bestsellers")
-      .then((res) => res.json())
-      .then((data) => {
-        this.$store.dispatch("setBestsellersData", data);
-      });
-  },
+  // mixins: [navigate],
 
   methods: {
     smoothScroll() {
@@ -117,6 +110,13 @@ export default {
       //     behavior: "smooth",
       //   });
     },
+  },
+  mounted() {
+    fetch("http://localhost:3000/bestsellers")
+      .then((res) => res.json())
+      .then((data) => {
+        this.$store.dispatch("setBestsellersData", data);
+      });
   },
   //   mounted() {
   //     this.smoothScroll();

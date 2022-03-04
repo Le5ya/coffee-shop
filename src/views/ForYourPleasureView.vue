@@ -54,8 +54,8 @@
                 classItem="shop__item"
                 :card="card"
                 @onNavigate="navigate"
-              >
-              </product-card>
+              />
+              <!-- for-you-pleasure-item -->
             </div>
           </div>
         </div>
