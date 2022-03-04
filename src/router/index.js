@@ -30,6 +30,12 @@
      path: '/thank-you',
      component: ThankYouView
    },
+
+   {
+     name: 'bestsellers',
+     path: '/:id',
+     component: GoodsItemView
+   },
    {
      name: 'coffee',
      path: '/our-coffee/:id',
@@ -40,6 +46,7 @@
      path: '/for-your-pleasure/:id',
      component: GoodsItemView
    },
+
 
  ]
 

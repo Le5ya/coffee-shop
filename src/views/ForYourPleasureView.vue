@@ -51,9 +51,6 @@
               <product-card
                 v-for="card in goods"
                 :key="card.id"
-                :name="card.name"
-                :price="card.price"
-                :image="card.image"
                 classItem="shop__item"
                 :card="card"
                 @onNavigate="navigate"

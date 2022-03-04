@@ -21,10 +21,27 @@ const bestsellers = {
       }
     ],
   },
+  mutations: {
+    setBestsellersData(state, data) {
+      state.bessellers = data
+    }
+  },
+  actions: {
+    setBestsellersData({
+      commit
+    }, data) {
+      commit('setBestsellersData', data)
+    },
+  },
   getters: {
     getBestsellers(state) {
       return state.bestsellers
     },
+    // getProductById(state) {
+    //   return (id) => {
+    //     return state.bestsellers.find((card) => card.id === +id)
+    //   }
+    // }
 
   },
 }

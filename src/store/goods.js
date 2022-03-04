@@ -55,11 +55,11 @@ const goods = {
     getGoods(state) {
       return state.goods
     },
-    getProductById(state) {
-      return (id) => {
-        return state.goods.find((good) => good.id === +id)
-      }
-    }
+    // getProductById(state) {
+    //   return (id) => {
+    //     return state.goods.find((good) => good.id === +id)
+    //   }
+    // }
 
   },
 }

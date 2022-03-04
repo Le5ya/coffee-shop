@@ -68,9 +68,6 @@
                 v-for="card in bestsellers"
                 :key="card.id"
                 classItem="best__item"
-                :name="card.name"
-                :price="card.price"
-                :image="card.image"
                 :card="card"
               />
             </div>
@@ -84,6 +81,7 @@
   <script>
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
+import { navigate } from "../mixins/navigate";
 
 import { scrollIntoView } from "seamless-scroll-polyfill";
 
@@ -93,6 +91,19 @@ export default {
     bestsellers() {
       return this.$store.getters["getBestsellers"];
     },
+  },
+  data() {
+    return {
+      name: "bestsellers",
+    };
+  },
+  mixins: [navigate],
+  mounted() {
+    fetch("http://localhost:3000/bestsellers")
+      .then((res) => res.json())
+      .then((data) => {
+        this.$store.dispatch("setBestsellersData", data);
+      });
   },
 
   methods: {
