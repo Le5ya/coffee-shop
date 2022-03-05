@@ -59,7 +59,10 @@
           </div>
           <div class="col-lg-4">
             <div class="shop__filter">
-              <div class="shop__filter-label">Or filter</div>
+              <div class="shop__filter-label" @click="clearFilter">
+                <!-- v-on:click -->
+                Or filter
+              </div>
               <div class="shop__filter-group">
                 <button class="shop__filter-btn" @click="onSort('Brazil')">
                   Brazil
@@ -140,6 +143,11 @@ export default {
         .then((data) => {
           this.$store.dispatch("setCoffeeData", data);
         });
+    },
+    clearFilter: function () {
+      console.log("clear");
+      onSearch(value).value = "";
+      onSort(value).value = "";
     },
   },
 };

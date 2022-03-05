@@ -51,7 +51,8 @@ const coffee = {
     getSearchValue(state) {
       return state.searchValue
     },
-  }
+  },
+
 };
 
 export default coffee
